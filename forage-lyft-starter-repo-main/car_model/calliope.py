@@ -1,10 +1,10 @@
 from datetime import datetime
 
-from engine.willoughby_engine import WilloughbyEngine
+from engine.capulet_engine import CapuletEngine
 
 
-class Glissade(WilloughbyEngine):
-    def needs_service(self):
+class Calliope(CapuletEngine):
+    def calliope(self):
         service_threshold_date = self.last_service_date.replace(year=self.last_service_date.year + 2)
         if service_threshold_date < datetime.today().date() or self.engine_should_be_serviced():
             return True
