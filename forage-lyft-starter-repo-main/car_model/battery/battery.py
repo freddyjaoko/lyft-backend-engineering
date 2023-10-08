@@ -1,10 +1,12 @@
-from Nubbin_battery import NubbinBattery 
+from car_model.battery.Spindler_battery import SpindlerBattery
+from car_model.battery.Nubbin_battery import NubbinBattery
 
 class Battery():
-    def __init__(self) -> None:
-        pass
-
-
     def needs_service():
-        pass
-        
+        spindler_service = SpindlerBattery.needs_service()
+        nubbin_service = NubbinBattery.needs_service()
+
+        if spindler_service or nubbin_service  == True:
+            return True
+        else:
+            return False

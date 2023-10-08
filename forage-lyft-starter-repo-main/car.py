@@ -11,7 +11,7 @@ class Car(ABC):
 
     @abstractmethod
     def needs_service(self):
-        if self.engine == True :
+        if self.engine == True or self.battery == True :
             return True
         else :
             return False
