@@ -18,7 +18,7 @@ class SpindlerBattery(Battery):
         year_today = date_today.year
         
         
-        if year_today - year_last >= 4:
+        if year_today - year_last >= 3:
             return True
         else:
             return False
