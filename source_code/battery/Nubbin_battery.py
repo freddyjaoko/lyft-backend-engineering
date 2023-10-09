@@ -1,10 +1,11 @@
 from datetime import datetime
+from abc import ABC
+from datetime import date
+from battery.battery import Battery
 
 
-
-class SpindlerBattery():
+class NubbinBattery(Battery):
     def __init__(self, last_service_date, current_date):
-        super().__init__(last_service_date)
         self.last_service_date = datetime.last_service_date
         self.current_date = datetime.today()
 
@@ -23,6 +24,3 @@ class SpindlerBattery():
         else:
             return False
         
-    @classmethod
-    def create_battery(cls, last_service_date, current_date):
-        return cls(last_service_date, current_date)
